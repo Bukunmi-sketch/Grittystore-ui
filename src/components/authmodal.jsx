@@ -261,7 +261,7 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
                             <input
                               type="text"
                               name="password"
-                              value={inputs.address || ""}
+                              value={inputs.password || ""}
                               onChange={handleChange}
                               required
                             />
@@ -272,8 +272,8 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
                             <label htmlFor="address"> Confirm Password </label>
                             <input
                               type="text"
-                              name="referral"
-                              value={inputs.referral || ""}
+                              name="confirmpass"
+                              value={inputs.confirmpass || ""}
                               onChange={handleChange}
                             />
                           </div>
