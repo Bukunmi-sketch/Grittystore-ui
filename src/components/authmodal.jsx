@@ -64,7 +64,7 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
   };
 
   //when button is submitted
-  const handlesubmit = (event) => {
+  const handleRegisterSubmit = (event) => {
     event.preventDefault();
     Loader();
 
@@ -73,14 +73,12 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
     console.log(addedcart.toString());
     setinputs((values) => ({
       ...values,
-  
       [name]: value,
     }));
     //console.log(inputs);
 
-        const API="http://api.afrimamafarms.com/Api/createOrder.php";
-    //  const API = "http://localhost/websites/mamapi/Api/createOrder.php";
-     // const API="https://afrimamafarms.com/endpoint/Api/createOrder.php";
+    const API = "http://localhost/sales/Grittystore/Api/RegisterAccount.php";
+
     axios
       .post(API, inputs, {
         headers: {
@@ -93,7 +91,7 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
       //    setOrders(response.data);
          console.log(response.data);
            if(response.data.status !== 500){
-            navigate(`/pay/${response.data.orderid} `);
+            navigate(`/page/${response.data.userid} `);
             onClear();
             onUnShow();
             unLoader();
@@ -109,9 +107,51 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
       });
   };
 
-     const linkurl="http://localhost/sales/Grittystore/Images/Product-img/";
- //  const linkurl="http://api.afrimamafarms.com/Images/product-img/";
-  // const linkurl = "https://afrimamafarms.com/endpoint/Images/product-img/";
+
+  //when button is submitted
+  const handleLoginSubmit = (event) => {
+    event.preventDefault();
+    Loader();
+
+    const name = event.target.name;
+    const value = event.target.value;
+    console.log(addedcart.toString());
+    setinputs((values) => ({
+      ...values,
+      [name]: value,
+    }));
+    //console.log(inputs);
+
+    const API = "http://localhost/sales/Grittystore/Api/LoginAccount.php";
+
+    axios
+      .post(API, inputs, {
+        headers: {
+          "content-type": "application/json",
+        },
+      })
+      .then(function (response) {
+        console.log(response);
+        if (response.status === 200) {
+      //    setOrders(response.data);
+         console.log(response.data);
+           if(response.data.status !== 500){
+            navigate(`/page/${response.data.userid} `);
+            onClear();
+            onUnShow();
+            unLoader();
+           }else{
+             setErrormsg(response.data.message);
+             unLoader();
+           }        
+        }
+      })
+      .catch(function (error) {
+        console.log("errorrrr", error);
+        unLoader();
+      });
+  };
+
 
   return (
     <>
@@ -161,12 +201,14 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
             <div className="subtotal-container">
                  
                   <div className="form">
-                    <form onSubmit={handlesubmit}>
+                    
                         <div className="form-container">
                       
-                          <p className="contact-info">Contact Information</p>
+                         
                           { showRegisterPage ? (  //SIGNUP PAGE
                             <>
+                             <p className="contact-info"> Welcome, to Grittystore</p>
+                          <form onSubmit={handleRegisterSubmit}>   
                           <div className="errorinfo"></div>
                           <div className="flexnameboxa">
                             <div className="namebox">
@@ -287,10 +329,12 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
                           </div>
 
                           <div className="have-acount">Already have an account ?  <button onClick={onShowLoginPage} >Log in </button> </div>
-
+                         </form>
                           </> 
                           ) : (   //LOGIN PAGE
                           <>
+                          <p className="contact-info">Login, to Grittystore</p>
+                          <form onSubmit={handleLoginSubmit}>
                            <div className="namebox">
                             <label htmlFor="address">Email or  Mobile No </label>
                             <input
@@ -320,11 +364,11 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
                           </div>
 
                            <div className="have-acount"> New User ?  <button onClick={onShowRegisterPage}> Sign up </button> </div>
+                           </form>
                           </>
                           ) }
                         </div>
                    
-                    </form>
                   </div>
             </div>
           </div>
