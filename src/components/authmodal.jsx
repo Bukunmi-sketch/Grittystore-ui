@@ -11,7 +11,7 @@ import pica from '../Images/smallproduct.png'
 import logo from '../Images/afrimamalogo.png'
 import Klumpsuccess from '../pages/klumpsuccess';
 
-function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthModal }) {
+function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthModal, showRegisterPage, onShowRegisterPage, onShowLoginPage }) {
   const navigate = useNavigate();
   
 
@@ -165,7 +165,7 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
                         <div className="form-container">
                       
                           <p className="contact-info">Contact Information</p>
-                          {authModal.show ? (  //SIGNUP PAGE
+                          { showRegisterPage ? (  //SIGNUP PAGE
                             <>
                           <div className="errorinfo"></div>
                           <div className="flexnameboxa">
@@ -286,6 +286,8 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
                              <button type="submit" className="checkout-btn">Sign up  </button>                       
                           </div>
 
+                          <div className="have-acount">Already have an account ?  <button onClick={onShowLoginPage} >Log in </button> </div>
+
                           </> 
                           ) : (   //LOGIN PAGE
                           <>
@@ -293,8 +295,8 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
                             <label htmlFor="address">Email or  Mobile No </label>
                             <input
                               type="text"
-                              name="address"
-                              value={inputs.address || ""}
+                              name="uniqueid"
+                              value={inputs.uniqueid || ""}
                               onChange={handleChange}
                               required
                             />
@@ -310,6 +312,14 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
                               onChange={handleChange}
                             />
                           </div>
+      
+                          <div className="namebox">
+                           
+                             <div style={{ color: "#FF6600" }}> {Errormsg} </div>  
+                             <button type="submit" className="checkout-btn"> Log In</button>                       
+                          </div>
+
+                           <div className="have-acount"> New User ?  <button onClick={onShowRegisterPage}> Sign up </button> </div>
                           </>
                           ) }
                         </div>

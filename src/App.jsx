@@ -38,6 +38,7 @@ function App() {
   const [cartdisplay, setcartdisplay]=useState({ left:"-70%",transition: "0.3s" });
   const [cartshow ,setcartshow]=useState({ width:"0" });
   const [authModal ,setauthModal]=useState({ width:"0" });
+  const [showRegisterPage, setshowRegisterPage]= useState(true);
   const [checkout, setCheckout]= useState(true);
   const [searchterm, setsearchterm] =useState("");
   const [searchresult, setsearchresult] =useState([]);
@@ -146,6 +147,14 @@ function App() {
   const unshow=()=>{
     setcartshow({show:false, width:"0" });
  //   console.log(cartshow);
+  }
+
+  const onShowRegisterPage=()=>{
+    setshowRegisterPage(true);
+  }
+
+  const onShowLoginPage=()=>{
+     setshowRegisterPage(false);
   }
 
   function showMessage(){
@@ -294,6 +303,9 @@ function App() {
           onUnShow={unshow} 
           delayLoader={delayLoader}
           onHideAuthModal={onHideAuthModal}
+          onShowRegisterPage={onShowRegisterPage}
+          onShowLoginPage={onShowLoginPage}
+          showRegisterPage={showRegisterPage}
             />
             )  :  ( '')  }   
 
