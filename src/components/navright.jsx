@@ -10,31 +10,23 @@ import { FaCartPlus,FaBars, FaTrash, FaHome, FaTeamspeak, FaInfo,FaShoppingBag, 
 import pica from '../Images/smallproduct.png'
 import logo from '../Images/afrimamalogo.png'
 import Klumpsuccess from '../pages/klumpsuccess';
+import AuthModalBox from './authmodal';
 
-function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, cartshow, onUnShow , Loader, unLoader, delayLoader }) {
+
+function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, cartshow, authModal, onShowAuthModal, onHideAuthModal, onShowRegisterPage,onShowLoginPage,showRegisterPage, onUnShow , unshow, Loader, unLoader, delayLoader }) {
   const navigate = useNavigate();
   // const [addedcart , setaddedcart]=useState(cartitems.map( (x) => x.product_name + "("  + x.qty + ")" ));
   const addedcart = cartitems.map((x) => x.product_name + "(" + x.qty + ")");
   const itemsprice = cartitems.reduce((a, c) => a + c.price * c.qty, 0);
   const shippingprice = itemsprice > 100 ? 0 : 0;
-  const totalprice = itemsprice + shippingprice;
-  const commissionfee = cartitems.map((x) => x.commission == '' || 0 ? x.commission = 1 : x.commission /100 * x.price * x.qty );  
-  
-
-  const percentCommission = cartitems.map((x) => x.commission + "%");
-  const eachitemPrices =cartitems.map((x) => "#" + x.price )
-  
-  /*
-    commission %
-  --------------------  x Price of products ( quantity of products )
-    100 
-  */
+   const totalprice = itemsprice + shippingprice;
+ 
 
   const [inputs, setinputs] =useState({
     product: addedcart.toString(),
     amount: totalprice,
-    percentCharges: percentCommission.toString(),
-    eachPrices:eachitemPrices.toString(),
+    
+    
    
     payment_status: "unpaid",
     order_status: "incomplete",
@@ -45,7 +37,7 @@ function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, c
   const [Errormsg, setErrormsg] = useState("");
   const [localgov, setLga] = useState([]);
   const [eachprice,seteachPrice] = useState('');
-
+  const [userToken, setUserToken] = useState('');
   const options = ["", "Oyo", "Lagos", "Osun", "Ondo"];
 
   //handle the changes
@@ -55,7 +47,7 @@ function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, c
 
    // console.log(addedcart.toString());
     setinputs((values) => ({
-      ...values, product: addedcart.toString(), percentCharges: percentCommission.toString(), eachPrices:eachitemPrices.toString(), amount: totalprice, payment_status: "unpaid", order_status: "incomplete", referral:'', [name]: value,
+      ...values, product: addedcart.toString(),   amount: totalprice, payment_status: "unpaid", order_status: "incomplete", referral:'', [name]: value,
     }));
 
    // console.log(inputs);
@@ -99,8 +91,8 @@ function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, c
       amount: totalprice,
       payment_status: "unpaid",
      
-      percentCharges: percentCommission.toString(),
-      eachPrices:eachitemPrices.toString(),
+      
+      
       order_status: "incomplete",
       referral:'',
       [name]: value,
@@ -141,6 +133,24 @@ function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, c
      const linkurl="http://localhost/sales/Grittystore/Images/Product-img/";
  //  const linkurl="http://api.afrimamafarms.com/Images/product-img/";
   // const linkurl = "https://afrimamafarms.com/endpoint/Images/product-img/";
+
+  if(!userToken){
+    return      <AuthModalBox
+    checkout={checkout}
+    onAdd={onAdd} 
+    onRemove={onRemove} 
+    authModal={authModal} 
+    onShowAuthModal={ onShowAuthModal}  
+    Loader={Loader}
+    unLoader={unLoader}
+    onUnShow={unshow} 
+    delayLoader={delayLoader}
+    onHideAuthModal={onHideAuthModal}
+    onShowRegisterPage={onShowRegisterPage}
+    onShowLoginPage={onShowLoginPage}
+    showRegisterPage={showRegisterPage}
+      />
+  }
 
   return (
     <>

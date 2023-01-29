@@ -37,7 +37,7 @@ function App() {
   const [cartitems, setCartitems ]=useState([]);
   const [cartdisplay, setcartdisplay]=useState({ left:"-70%",transition: "0.3s" });
   const [cartshow ,setcartshow]=useState({ width:"0" });
-  const [authModal ,setauthModal]=useState({ width:"0" });
+  const [authModal ,setauthModal]=useState({show:'false', width:"0" });
   const [showRegisterPage, setshowRegisterPage]= useState(true);
   const [checkout, setCheckout]= useState(true);
   const [searchterm, setsearchterm] =useState("");
@@ -284,6 +284,7 @@ function App() {
           onDelete={onDelete} 
           onClear={onClear} 
           Loader={Loader}
+          authModal={authModal}
           unLoader={unLoader}
           onUnShow={unshow} 
           delayLoader={delayLoader}

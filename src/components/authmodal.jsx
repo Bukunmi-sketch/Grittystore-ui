@@ -11,7 +11,7 @@ import pica from '../Images/smallproduct.png'
 import logo from '../Images/afrimamalogo.png'
 import Klumpsuccess from '../pages/klumpsuccess';
 
-function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthModal, showRegisterPage, onShowRegisterPage, onShowLoginPage }) {
+function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthModal, showRegisterPage, onShowRegisterPage, onShowLoginPage , setUserToken }) {
   const navigate = useNavigate();
   
 
