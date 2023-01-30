@@ -37,7 +37,7 @@ function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, c
   const [Errormsg, setErrormsg] = useState("");
   const [localgov, setLga] = useState([]);
   const [eachprice,seteachPrice] = useState('');
-  const [userToken, setUserToken] = useState('');
+  
   const options = ["", "Oyo", "Lagos", "Osun", "Ondo"];
 
   //handle the changes
@@ -133,8 +133,8 @@ function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, c
      const linkurl="http://localhost/sales/Grittystore/Images/Product-img/";
  //  const linkurl="http://api.afrimamafarms.com/Images/product-img/";
   // const linkurl = "https://afrimamafarms.com/endpoint/Images/product-img/";
-
-  if(!userToken){
+/*
+  if(userToken == ""){
     return      <AuthModalBox
     checkout={checkout}
     onAdd={onAdd} 
@@ -151,6 +151,7 @@ function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, c
     showRegisterPage={showRegisterPage}
       />
   }
+  */
 
   return (
     <>

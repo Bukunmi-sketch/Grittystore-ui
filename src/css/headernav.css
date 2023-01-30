@@ -31,6 +31,12 @@
     transition: 0.3s;
 }
 
+.bars{
+    
+    font-size:2.5em;
+     display: none;
+}
+
 .navleft .navsidebar .menu-item{
     display:flex;
     align-items: center;

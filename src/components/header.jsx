@@ -5,7 +5,7 @@ import { FaCartPlus,FaBars,  FaTimes, FaSearch, FaUser, FaUserCircle, FaUserAlt,
 import pica from '../Images/smallproduct.png'
 import logo from '../Images/afrimamalogo.png'
 
-function Header( {countCartitems, cartdisplay, onDisplay, onShow, onShowAuthModal,  onUnDisplay }) {
+function Header( {countCartitems, cartdisplay, onDisplay, onShow, onShowAuthModal,  onUnDisplay, userToken }) {
 
    const navigate= useNavigate();
 
@@ -17,7 +17,10 @@ function Header( {countCartitems, cartdisplay, onDisplay, onShow, onShowAuthModa
                  </h4>
 
                  <div className="otherside"  >
-                 <ul style={ {left:cartdisplay.left }}>
+                  
+                  
+                     
+                      <ul style={ {left:cartdisplay.left }}>
                       <li className="closebar">
                         <FaTimes onClick={()=>onUnDisplay()} className='icons' />
                       </li>               
@@ -26,18 +29,22 @@ function Header( {countCartitems, cartdisplay, onDisplay, onShow, onShowAuthModa
                        <li> <Link to='/product' className="menu-item" onClick={()=>onUnDisplay()} > Brands  </Link> </li>
                        <li> <Link to='/Team' className="menu-item"  onClick={()=>onUnDisplay() } > Contact us </Link>  </li>
                        <li> <Link to='/about' className="menu-item" onClick={()=>onUnDisplay()}> About us </Link>  </li> 
-                     {/*  <li> <a href='https://api.afrimamafarms.com/agent/Views/register.php' className="menu-item" target="_blank"> Agent </a>  </li> */} 
-                            
+                      
+                     
                </ul>  
+              
+                
            
                 <div className='bar-box'>
                      <FaBars className="bars" style={ { color:'orangered', fontSize:'1.5em' }} onClick={()=>onDisplay()} /> 
+                     
                 </div>  
              
                 <div className='cartlist'>
                   <FaRegUserCircle style={ { fontSize:'1.5em' }} onClick={()=> onShowAuthModal() }/>
 
-                </div>
+                </div>     
+             
 
                 <div className='cartlist'>
 

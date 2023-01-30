@@ -369,7 +369,7 @@ function AuthModalBox( { onAuthModal, authModal, Loader, unLoader, onHideAuthMod
                           ) }
                         </div>
                    
-                  </div>
+                  </div> 
             </div>
           </div>
         </div>

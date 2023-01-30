@@ -48,6 +48,7 @@ function App() {
   const [Error, setError ]=useState("");
   const [message, setMessage]=useState('');
   const [msgdisplay, setMsgdisplay] = useState({display:"none"});
+  const [userToken, setUserToken] = useState(2345);
 
   const ref = useRef();
 
@@ -270,6 +271,7 @@ function App() {
           authModal={authModal} 
           onShowAuthModal={ onShowAuthModal}
           onHideAuthModal={ onHideAuthModal} 
+          userToken={userToken}
             />
            <Addmsg message={message} showMessage={showMessage} hideMessage={hideMessage} msgdisplay={msgdisplay} />
 
@@ -288,6 +290,7 @@ function App() {
           unLoader={unLoader}
           onUnShow={unshow} 
           delayLoader={delayLoader}
+          userToken={userToken}
             />
             )  :  ( '')  }   
 
@@ -307,6 +310,7 @@ function App() {
           onShowRegisterPage={onShowRegisterPage}
           onShowLoginPage={onShowLoginPage}
           showRegisterPage={showRegisterPage}
+          userToken={userToken}
             />
             )  :  ( '')  }   
 
