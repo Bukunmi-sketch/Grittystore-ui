@@ -11,7 +11,6 @@ import Header from './components/header';
 import Main from './components/main';
 import Sectiona from './components/sectiona';
 import Navright from './components/navright';
-import AuthModalBox from './components/authmodal';
 import About from './components/about';
 import Sectionb from './components/sectionb';
 import Footer from './components/footer';
@@ -37,8 +36,6 @@ function App() {
   const [cartitems, setCartitems ]=useState([]);
   const [cartdisplay, setcartdisplay]=useState({ left:"-70%",transition: "0.3s" });
   const [cartshow ,setcartshow]=useState({ width:"0" });
-  const [authModal ,setauthModal]=useState({show:'false', width:"0" });
-  const [showRegisterPage, setshowRegisterPage]= useState(true);
   const [checkout, setCheckout]= useState(true);
   const [searchterm, setsearchterm] =useState("");
   const [searchresult, setsearchresult] =useState([]);
@@ -134,29 +131,14 @@ function App() {
     undisplay();
   }
 
-  const  onShowAuthModal=()=>{
-    setauthModal({show:true, width:"100%" ,transition: "0.3s"});
-  //  console.log(cartshow);
-    undisplay();
-  }
-
-  const onHideAuthModal=()=>{
-    setauthModal({show:false, width:"0" });
- //   console.log(cartshow);
-  }
+  
 
   const unshow=()=>{
     setcartshow({show:false, width:"0" });
  //   console.log(cartshow);
   }
 
-  const onShowRegisterPage=()=>{
-    setshowRegisterPage(true);
-  }
 
-  const onShowLoginPage=()=>{
-     setshowRegisterPage(false);
-  }
 
   function showMessage(){
     setMsgdisplay({ display:"block" });
@@ -268,10 +250,6 @@ function App() {
           onShow={show} 
           onUnDisplay={undisplay} 
           onUnShow={unshow} 
-          authModal={authModal} 
-          onShowAuthModal={ onShowAuthModal}
-          onHideAuthModal={ onHideAuthModal} 
-          userToken={userToken}
             />
            <Addmsg message={message} showMessage={showMessage} hideMessage={hideMessage} msgdisplay={msgdisplay} />
 

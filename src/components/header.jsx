@@ -5,7 +5,7 @@ import { FaCartPlus,FaBars,  FaTimes, FaSearch, FaUser, FaUserCircle, FaUserAlt,
 import pica from '../Images/smallproduct.png'
 import logo from '../Images/afrimamalogo.png'
 
-function Header( {countCartitems, cartdisplay, onDisplay, onShow, onShowAuthModal,  onUnDisplay, userToken }) {
+function Header( {countCartitems, cartdisplay, onDisplay, onShow,  onUnDisplay, }) {
 
    const navigate= useNavigate();
 
@@ -40,10 +40,7 @@ function Header( {countCartitems, cartdisplay, onDisplay, onShow, onShowAuthModa
                      
                 </div>  
              
-                <div className='cartlist'>
-                  <FaRegUserCircle style={ { fontSize:'1.5em' }} onClick={()=> onShowAuthModal() }/>
-
-                </div>     
+              
              
 
                 <div className='cartlist'>

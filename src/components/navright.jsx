@@ -10,10 +10,9 @@ import { FaCartPlus,FaBars, FaTrash, FaHome, FaTeamspeak, FaInfo,FaShoppingBag, 
 import pica from '../Images/smallproduct.png'
 import logo from '../Images/afrimamalogo.png'
 import Klumpsuccess from '../pages/klumpsuccess';
-import AuthModalBox from './authmodal';
 
 
-function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, cartshow, authModal, onShowAuthModal, onHideAuthModal, onShowRegisterPage,onShowLoginPage,showRegisterPage, onUnShow , unshow, Loader, unLoader, delayLoader }) {
+function Navright( { checkout, cartitems, onAdd ,onRemove , onDelete, onClear, cartshow, onUnShow , unshow, Loader, unLoader, delayLoader }) {
   const navigate = useNavigate();
   // const [addedcart , setaddedcart]=useState(cartitems.map( (x) => x.product_name + "("  + x.qty + ")" ));
   const addedcart = cartitems.map((x) => x.product_name + "(" + x.qty + ")");
