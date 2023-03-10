@@ -1,0 +1,19 @@
+complete the readme text file
+get  a screenshot of the site in mobie and desktop mode
+get a screenshot of the file arrangement in the code
+
+
+
+covert the readme files and edit it to pdf and docs format
+hosting it 
+
+
+
+
+codes
+
+content are needed for the sites
+need to work on the routing
+need to work on the product ui
+footer address
+icons too

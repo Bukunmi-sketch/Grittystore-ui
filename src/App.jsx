@@ -273,24 +273,6 @@ function App() {
             )  :  ( '')  }   
 
 
-               { authModal.show ? (  
-              <AuthModalBox
-          checkout={checkout}
-          onAdd={onAdd} 
-          onRemove={onRemove} 
-          authModal={authModal} 
-          onShowAuthModal={ onShowAuthModal}  
-          Loader={Loader}
-          unLoader={unLoader}
-          onUnShow={unshow} 
-          delayLoader={delayLoader}
-          onHideAuthModal={onHideAuthModal}
-          onShowRegisterPage={onShowRegisterPage}
-          onShowLoginPage={onShowLoginPage}
-          showRegisterPage={showRegisterPage}
-          userToken={userToken}
-            />
-            )  :  ( '')  }   
 
 
                         <Routes>
