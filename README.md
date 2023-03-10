@@ -1,39 +1,38 @@
-## GrittyStore!
+_GrittyStore_
 
 ## Introduction
 - [Grittystore] -  is a ecommerce  for Web for and analytics using
- . We have made sure that you get a good design for mobile and dashboard application and a
-complete solution for you to easily implement this app for any restaurant application.
-Enatega dashboard
-Amplitude
-with is used to build this application for mobile end. For dashboard panel React has
-been used. Both mobile and web use . For State management and querying end points 
-is used. The API is made using with .
-React Native Expo
-Graphql Apollo
-Client Node Mongodb
-It has all the features that you will ever need to implement this application for any restaurant or some kind of
-food delivery application. Some of the features that are included in it are:
-Push Notification for both Mobile and Web
-Analytics Dashboard for Mobile app
-Payment Integration for both Paypal and Stripe
-Order tracking Feature
-Email Integration -- Email is sent for some actions such as making Order
-Rating and Review
-Finding address using GPS integration
-Facebook and Google Authentication integration
-Mobile Responsive Dashboard
-Multi Language Support using Localization
-Separate Rider App for orders management
-Multiple food variation items
-We have made sure that the code is well structured and removed of unnecessary screens to make your
-development life easier. It is also integrated with the following features so you could have an even better
-development experience.
+ . We have made sure that you get a good design for the dashboard application and complete solution for you to easily implement this website for any Ecommerce store or shop .
+
+## Enatega dashboard
+- with is used to build this application for mobile end.
+- For dashboard panel React has been used. Both mobile and web use . 
+- For State management and querying end points is used. The API is made using with .
+- React Native Expo
+- Graphql Apollo
+- Client Node Mongodb
+
+ **It has all the features that you will ever need to implement this application for any restaurant or some kind of food delivery application. Some of the features that are included in it are:**
+- Push Notification for both Mobile and Web
+- Analytics Dashboard for the Admin
+- Payment Integration for both Paypal and Stripe
+- Order tracking Feature
+- Email Integration -- Email is sent for some actions such as making Order
+- Rating and Review
+- Finding address using GPS integration
+- Facebook and Google Authentication integration
+- Mobile Responsive Dashboard
+- Multi Language Support using Localization
+
+*We have made sure that the code is well structured and removed of unnecessary screens to make your development life easier. It is also integrated with the following features so you could have an even better development experience.*
+
 ESLint to provide you with linting capability in Javascript.
 Prettier for code formatting
 Jest for unit testing
 Husky to prevent bad commits.
-What will you have in Enatega Full App?
+
+*What will you have in Enatega Full App?*
+
 Enatega Mobile App
 Enatega Rider App
 Admin Web Dashboard
@@ -72,8 +71,9 @@ High Level Architecture
 User Mobile App communicates with both API Server and Amplitudes analytics dashboard
 Web dashboard communicates with only API Server
 Rider App communicates with API Server
-Installation
-What Prerequisite knowledge do you need to run this app ?
+
+## Installation
+  *What Prerequisite knowledge do you need to run this app ?*
 Node
 Express
 React
@@ -83,7 +83,8 @@ Git
 Pre-Installed software
 v6.0>=node<=v8.9.2 Download
 v4.0>=npm<=v6.91
-Prerequisite Credentials you need to obtain in order to run this
+
+*Prerequisite Credentials you need to obtain in order to run this*
 app
 App Ids for Mobile App in app.json
 Facebook Scheme
@@ -112,11 +113,12 @@ Project Id
 Storage Buck
 Messaging Sender Id
 App Id
-NOTE: Email provider has been only been tested for gmail accounts
+ _NOTE: Email provider has been only been tested for gmail accounts_
 How to deploy in local machine
 Deploy Api-Server, Admin Web Dashboard, Mobile App and
 Amplitude Dashboard for Analytics in Local machine
-Installation Steps
+
+# Installation Steps
 Download Enatega full app and extract it
 Open terminal in extracted folder
 Api Server
@@ -225,7 +227,8 @@ https://amplitude.com
 2. You can further explore dashboard by following amplitude documentation.
 https://developers.amplitude.com/
 FAQS
-FAQs
+
+## FAQs
 How to override style in NativeBase?
 How do I add events with the components?
 How to customize components of NativeBase?
@@ -241,8 +244,10 @@ What is Amplitude dashboard?
 How is payment Setup with Expo?
 How to override style in NativeBase?
 I didn't find a way to override style.
-How can I include React StyleSheet into my app?
-Solution:
+
+
+*How can I include React StyleSheet into my app?*
+## Solution:
 is built on top of .
 Hence with any component, you can pass the style property which will be merged into the default style of
 that component.
@@ -251,7 +256,8 @@ NativeBase React Native
 1 <Button style={{backgroundColor: '#FF0000'}}>
 2 Click me!
 3 </Button>
-How do I add events with the components?
+
+*How do I add events with the components?*
 What events are available for the components?
 Example buttons, list items etc.
 Solution:
