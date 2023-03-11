@@ -5,35 +5,45 @@ import { FaCartPlus,FaBars,  FaTimes, FaSearch, FaUser, FaUserCircle, FaUserAlt,
 import pica from '../Images/smallproduct.png'
 import logo from '../Images/afrimamalogo.png'
 
-function Rightbar( {countCartitems, cartdisplay, onDisplay, onShow,  onUnDisplay, onSearch, searchterm, }) {
+function Leftbar( { cartdisplay, onDisplay, onShow,  onUnDisplay, }) {
 
    const navigate= useNavigate();
 
      return ( 
           <>
-         <div className='rightbar'>
+         <div className='navleft'>
                        
-                  <ul style={ {left:cartdisplay.left }}>
+                  <ul style={ {left:cartdisplay.left }} className='navsidebar'>
                       <li className="closebar">
                         <FaTimes onClick={()=>onUnDisplay()} className='icons' />
-                      </li>               
+                      </li>      
+
+                       <h3>Categories</h3>         
                        <li> <Link to='/' className="menu-item" onClick={()=>onUnDisplay()}> Home </Link>  </li> 
                        
                        <li> <Link to='/product' className="menu-item" onClick={()=>onUnDisplay()} > Brands  </Link> </li>
                        <li> <Link to='/Team' className="menu-item"  onClick={()=>onUnDisplay() } > Contact us </Link>  </li>
-                       <li> <Link to='/about' className="menu-item" onClick={()=>onUnDisplay()}> About us </Link>  </li>     
+                       <li> <Link to='/about' className="menu-item" onClick={()=>onUnDisplay()}> About us </Link>  </li>   
+
+                        <h3>Sections</h3>    
+                        <li> <Link to='/' className="menu-item" onClick={()=>onUnDisplay()}> Home </Link>  </li> 
+                       
+                       <li> <Link to='/product' className="menu-item" onClick={()=>onUnDisplay()} > Brands  </Link> </li>
+                       <li> <Link to='/Team' className="menu-item"  onClick={()=>onUnDisplay() } > Contact us </Link>  </li>
+                       <li> <Link to='/about' className="menu-item" onClick={()=>onUnDisplay()}> About us </Link>  </li>
+
+                        <h3>Supports</h3>    
+                        <li> <Link to='/' className="menu-item" onClick={()=>onUnDisplay()}> Home </Link>  </li> 
+                       
+                       <li> <Link to='/product' className="menu-item" onClick={()=>onUnDisplay()} > Brands  </Link> </li>
+                       <li> <Link to='/Team' className="menu-item"  onClick={()=>onUnDisplay() } > Contact us </Link>  </li>
+                       <li> <Link to='/about' className="menu-item" onClick={()=>onUnDisplay()}> About us </Link>  </li>    
+
                </ul>  
                                
-         </div>
-
-              
-                   
-
-                      
-                 
-                     
+         </div>                  
 </>
       );
     }
  
- export default Rightbar;
+ export default Leftbar;

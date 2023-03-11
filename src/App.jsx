@@ -6,12 +6,13 @@ import './css/product.css'
 import './css/media.css'
 import './css/checkout.css'
 import './css/headernav.css'
+import './css/left.css'
 import './css/loader.css'
 import Header from './components/header';
 import Main from './components/main';
 import Sectiona from './components/sectiona';
 import Navright from './components/navright';
-
+import Leftbar from './components/leftbar';
 import About from './components/about';
 import Sectionb from './components/sectionb';
 import Footer from './components/footer';
@@ -116,7 +117,7 @@ function App() {
   }
   const display=()=>{
     setcartdisplay({show:true, left:"0",transition: "0.3s" });
-   // console.log(cartdisplay);
+    console.log(cartdisplay);
     unshow();
   }
 
@@ -255,6 +256,15 @@ function App() {
            searchterm={searchterm}
             />
            <Addmsg message={message} showMessage={showMessage} hideMessage={hideMessage} msgdisplay={msgdisplay} />
+
+           { cartdisplay.show ? (  
+              <Leftbar
+              onDisplay={display} 
+              cartdisplay={cartdisplay} 
+              onUnDisplay={undisplay}
+            />
+            )  :  ( '')  }   
+
 
            { cartshow.show ? (  
               <Navright
