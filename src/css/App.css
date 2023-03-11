@@ -50,19 +50,23 @@ header{
     background-color:var(--color-white);
     color:var(--color-black);
     position:fixed;
-    border: 1px solid white;
+    border: 1px solid transparent;
     height: 60px;
     width: 100%;
     z-index: 50;
     top: 0;
     box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.09);
    }
+
+   .bar-box{
+       margin-left:20px ;
+   }
    
    .logo{
     font-size: 30px;  
     letter-spacing: 1px;
     cursor: pointer;
-    margin-left: 50px;
+    margin-left:30px;
     font-weight: bold;
     height:50px;
     width: 150px;
@@ -74,6 +78,25 @@ header{
    .logo span{
        color: black;
    }
+
+   input[type=search]{
+    width:15%;
+    background-color: #ecf1f1f6;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    text-align: center;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    font-size: 0.8em;
+}
+
+input[type=search]:hover{
+   border:1px solid #f8f8f8;
+}
 
   .closebar{
     border: 1px solid transparent;
@@ -305,25 +328,6 @@ header{
 
 .about span{
     color: orangered;
-}
-
-input[type=search]{
-    width:70%;
-    background-color: #ecf1f1f6;
-    height: 45px;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    text-align: center;
-    margin:0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position:relative;
-    font-size: 0.8em;
-}
-
-input[type=search]:hover{
-   border:1px solid #f8f8f8;
 }
 
 aside{

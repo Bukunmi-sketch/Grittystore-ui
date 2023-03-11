@@ -250,6 +250,8 @@ function App() {
           onShow={show} 
           onUnDisplay={undisplay} 
           onUnShow={unshow} 
+          onSearch={searchchange}
+           searchterm={searchterm}
             />
            <Addmsg message={message} showMessage={showMessage} hideMessage={hideMessage} msgdisplay={msgdisplay} />
 

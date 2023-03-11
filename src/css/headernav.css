@@ -34,7 +34,7 @@
 .bars{
     
     font-size:2.5em;
-     display: none;
+     display: block;
 }
 
 .navleft .navsidebar .menu-item{
