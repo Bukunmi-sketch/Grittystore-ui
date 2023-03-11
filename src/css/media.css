@@ -41,7 +41,7 @@
         height:100vh;
         background-color: var(--color-white);
         left:-70%;
-        border: 1px solid transparent;
+        border: 1px solid red;
         z-index:200px;
         }
 

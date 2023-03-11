@@ -11,6 +11,7 @@ import Header from './components/header';
 import Main from './components/main';
 import Sectiona from './components/sectiona';
 import Navright from './components/navright';
+
 import About from './components/about';
 import Sectionb from './components/sectionb';
 import Footer from './components/footer';
