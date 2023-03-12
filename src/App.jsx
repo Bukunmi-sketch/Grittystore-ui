@@ -36,7 +36,8 @@ function App() {
   const [products, setProduce]= useState([]);
  // const [cartitems, setCartitems ]=useLocalStorage("cartkey",[]);
   const [cartitems, setCartitems ]=useState([]);
-  const [cartdisplay, setcartdisplay]=useState({ left:"-70%",transition: "0.3s" });
+// const [cartdisplay, setcartdisplay]=useState({ left:"-70%",transition: "0.3s" });
+  const [cartdisplay, setcartdisplay]=useState({ width:"0" });
   const [cartshow ,setcartshow]=useState({ width:"0" });
   const [checkout, setCheckout]= useState(true);
   const [searchterm, setsearchterm] =useState("");
@@ -116,13 +117,15 @@ function App() {
     console.log(checkout);
   }
   const display=()=>{
-    setcartdisplay({show:true, left:"0",transition: "0.3s" });
+   // setcartdisplay({show:true, left:"0",transition: "0.3s" });
+    setcartdisplay({show:true, width:"50%" ,transition: "0.3s"});
     console.log(cartdisplay);
     unshow();
   }
 
   const undisplay=()=>{
-    setcartdisplay({show:false, left:"-70%" ,transition: "0.3s" });
+     setcartdisplay({show:false, width:"0" , transition: "0.3s"});
+   // setcartdisplay({show:false, left:"-70%" ,transition: "0.3s" });
     window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
    // console.log(cartdisplay);
   }
@@ -132,8 +135,6 @@ function App() {
   //  console.log(cartshow);
     undisplay();
   }
-
-  
 
   const unshow=()=>{
     setcartshow({show:false, width:"0" });
