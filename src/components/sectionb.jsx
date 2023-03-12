@@ -9,6 +9,10 @@ import egusi from "../Images/egusi.png"
 import semoegusi from "../Images/semoegusi.png"
 import chefs from "../Images/chefscooking.png"
 import van from "../icon/free-delivery.png"
+import secured from "../icon/credit-card(1).png"
+import support from "../icon/24-hours-support.png"
+import exchange from "../icon/exchange.png"
+
 
 function Sectionb() {
     return ( 
@@ -83,6 +87,24 @@ function Sectionb() {
                 <div className="box">
                     <img src={van} alt="" />
                     <p>Free delivery</p>
+                    <p>lorem ipsum dolor sit amet,</p>
+                </div>
+
+                <div className="box">
+                    <img src={secured} alt="" />
+                    <p>Secured Payments</p>
+                    <p>lorem ipsum dolor sit amet,</p>
+                </div>
+
+                <div className="box">
+                    <img src={support} alt="" />
+                    <p>24/7 Online Support</p>
+                    <p>lorem ipsum dolor sit amet,</p>
+                </div>
+
+                <div className="box">
+                    <img src={exchange} alt="" />
+                    <p>exchange</p>
                     <p>lorem ipsum dolor sit amet,</p>
                 </div>
              </div>
