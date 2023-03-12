@@ -8,7 +8,7 @@ import chat from "../Images/Chatscreenshot.png"
 import egusi from "../Images/egusi.png"
 import semoegusi from "../Images/semoegusi.png"
 import chefs from "../Images/chefscooking.png"
-import ladyfarming from "../Images/ladyfarming.png"
+import van from "../icon/free-delivery.png"
 
 function Sectionb() {
     return ( 
@@ -76,11 +76,15 @@ function Sectionb() {
         </section>
 
         <section className="greeny-order">
-             <h3>Be <span style={ { color: "#20B302"}}>  Greeny  </span> order from farm!</h3>
+             <h3> We Serve You The Best Product At Best Prices </h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam molestias officia commodi. Nemo maiores culpa saepe aut, debitis sunt aspernatur vel error repellendus suscipit, necessitatibus expedita? Repellendus mollitia a totam.</p>
 
-             <div className="greeny-order-img">
-                 <img src={ladyfarming} alt="" />
-                 <img src={semoegusi} alt="" />
+             <div className="flex-container">
+                <div className="box">
+                    <img src={van} alt="" />
+                    <p>Free delivery</p>
+                    <p>lorem ipsum dolor sit amet,</p>
+                </div>
              </div>
         </section>
         </>
