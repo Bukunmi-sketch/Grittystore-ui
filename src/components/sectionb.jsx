@@ -52,33 +52,6 @@ function Sectionb() {
             </div>
         </section>
 
-        <section className="mission">
-             <h3> Our mission</h3>
-             <p>"To provide Africans with food items with flexible payment plans and stressfree delivery"</p>
-
-             <div className="mission-box">
-                 
-                  <div className="mission-img">
-                      <div className="mission-img-a">
-                         <img src={egusi} alt="" />
-                         <img src={semoegusi} alt="" />
-                      </div>
-                      <div className="mission-img-b">
-                         <img src={chefs} alt="" /> 
-                      </div>
-                  </div>
-
-                  <div className="mission-vision">
-                       <h3>Our Vision</h3>
-                       <div className="vision-text">
-                           <i>“Stressfree Delivery and Flexible Payment Plans”</i>
-                       </div>
-                       
-                  </div>
-
-             </div>
-        </section>
-
         <section className="greeny-order">
              <h3> We Serve You The Best Product At Best Prices </h3>
              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam molestias officia commodi. Nemo maiores culpa saepe aut, debitis sunt aspernatur vel error repellendus suscipit, necessitatibus expedita? Repellendus mollitia a totam.</p>
@@ -107,6 +80,33 @@ function Sectionb() {
                     <p>exchange</p>
                     <p>lorem ipsum dolor sit amet,</p>
                 </div>
+             </div>
+        </section>
+
+        <section className="support">
+             <h3> Our mission</h3>
+             <p>Visit Our Support Center</p>
+
+             <div className="mission-box">
+                 
+                  <div className="mission-img">
+                      <div className="mission-img-a">
+                         <img src={egusi} alt="" />
+                         <img src={semoegusi} alt="" />
+                      </div>
+                      <div className="mission-img-b">
+                         <img src={chefs} alt="" /> 
+                      </div>
+                  </div>
+
+                  <div className="mission-vision">
+                       <h3>Our Vision</h3>
+                       <div className="vision-text">
+                           <i>“Stressfree Delivery and Flexible Payment Plans”</i>
+                       </div>
+                       
+                  </div>
+
              </div>
         </section>
         </>
