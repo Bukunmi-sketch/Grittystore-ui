@@ -84,30 +84,9 @@ function Sectionb() {
         </section>
 
         <section className="support">
-             <h3> Our mission</h3>
+             <img src={egusi} alt="" />
              <p>Visit Our Support Center</p>
-
-             <div className="mission-box">
-                 
-                  <div className="mission-img">
-                      <div className="mission-img-a">
-                         <img src={egusi} alt="" />
-                         <img src={semoegusi} alt="" />
-                      </div>
-                      <div className="mission-img-b">
-                         <img src={chefs} alt="" /> 
-                      </div>
-                  </div>
-
-                  <div className="mission-vision">
-                       <h3>Our Vision</h3>
-                       <div className="vision-text">
-                           <i>“Stressfree Delivery and Flexible Payment Plans”</i>
-                       </div>
-                       
-                  </div>
-
-             </div>
+             
         </section>
         </>
      );
