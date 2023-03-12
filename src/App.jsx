@@ -277,7 +277,6 @@ function App() {
           onDelete={onDelete} 
           onClear={onClear} 
           Loader={Loader}
-          authModal={authModal}
           unLoader={unLoader}
           onUnShow={unshow} 
           delayLoader={delayLoader}

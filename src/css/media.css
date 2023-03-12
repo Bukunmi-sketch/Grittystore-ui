@@ -27,7 +27,7 @@
 /* ---------------------------MEDIA QUERY FOR SMALL TABLETS AND MOBILE PHONES-----------------*/
 
 @media screen and (max-width:992px) {
-
+/*
     .bars{
         display: block;
     }
@@ -41,7 +41,7 @@
         height:100vh;
         background-color: var(--color-white);
         left:-70%;
-        border: 1px solid red;
+        border: 1px solid yellow;
         z-index:200px;
         }
 
@@ -55,7 +55,7 @@
         letter-spacing:0;      
         margin-left:20px;
                }
-    
+    */
     .closebar{
         display: block;
         color:var(--color-orange);

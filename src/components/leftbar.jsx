@@ -10,10 +10,9 @@ function Leftbar( { cartdisplay, onDisplay, onShow,  onUnDisplay, }) {
    const navigate= useNavigate();
 
      return ( 
-          <>
-         <div className='navleft'>
+         <div className="leftnav">
                        
-                  <ul style={ {left:cartdisplay.left }} className='navsidebar'>
+                  <ul style={ {left:cartdisplay.left }} className=''>
                       <li className="closebar">
                         <FaTimes onClick={()=>onUnDisplay()} className='icons' />
                       </li>      
@@ -42,7 +41,6 @@ function Leftbar( { cartdisplay, onDisplay, onShow,  onUnDisplay, }) {
                </ul>  
                                
          </div>                  
-</>
       );
     }
  
