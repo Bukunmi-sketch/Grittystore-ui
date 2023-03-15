@@ -280,23 +280,6 @@ input[type=search]:hover{
     height: 100%;
 }
 
-/* -----------------straight image--------------------------*/
-.boxb .imga{
-    margin:0px;
-    height:600px;
-    width: 670px;
-    border: 1px solid transparent;
-}
-
-/* -----------------slant image--------------------------*/
-.boxb .imgb{
-    height: 350px;
-    width: 350px;
-    border: 1px solid transparent;
-    position: absolute;
-    margin:-300px 0 0 -50px;
-    
-}
 
 .about button{
     text-align: center;
@@ -312,21 +295,35 @@ input[type=search]:hover{
 }
 
 
+/* -------------------------WHY-------------------*/
+.second-section{
+    border: 1px solid red;
+}
 
-.about h6, h5{
+.second-section .flex-container{
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+.flex-container .box{
+    background-image: url('../Images/topback.jpg');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    border: 1px solid red;
+    height: 150px;
+    width: 200px;
+    border-radius: 3px;
+    color: var(--color-white);
     font-weight: bold;
-    text-align: center;
-    font-family: "poppins",sans-serif;
 }
 
-.about span{
-    color: orangered;
-}
 
-aside{
-    border:1px solid transparent;
-    width:100%;
-}
+
+
 
 /* -------------------------WHY-------------------*/
 
