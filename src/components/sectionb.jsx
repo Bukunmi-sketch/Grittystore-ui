@@ -22,7 +22,7 @@ function Sectionb() {
              <h3> We Serve You The Best Product At Best Prices </h3>
              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam molestias officia commodi. Nemo maiores culpa saepe aut, debitis sunt aspernatur vel error repellendus suscipit, necessitatibus expedita? Repellendus mollitia a totam.</p>
 
-             <div className="first-flex-container">
+             <div className="support-flex-container">
                 <div className="boxa">
                     <img src={van} alt="" />
                     <p>Free delivery</p>

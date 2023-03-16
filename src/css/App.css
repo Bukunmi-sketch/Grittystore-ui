@@ -329,6 +329,32 @@ input[type=search]:hover{
 
 
 
+.support-flex-container{
+   border: 1px solid red;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: 10px;
+}
+
+.support-flex-container .boxa{
+    border-right: 1px solid #cecece;
+    width:350px;
+    height:350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxa img{
+    border: 1px solid transparent;
+    width:150px;
+    height:150px;
+    text-align: center;
+}
+
+
 
 /* -------------------------RIGHT-------------------*/
 
