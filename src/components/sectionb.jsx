@@ -49,7 +49,7 @@ function Sectionb() {
              </div>
         </section>
 
-        <section className="support">
+        <section className="visit-us">
              <p>Visit Our Support Center</p>
              
         </section>

@@ -111,6 +111,37 @@ function App() {
     
   }
 
+
+   
+  async function getCategories(){
+    setError("wait a minute ,fetching categories");
+    try {
+      const API_LINK="http://localhost/sales/Grittystore/Api/getCategories.php";
+     //  const API_LINK="http://api.afrimamafarms.com/Api/getCategories.php";  
+   //    const API_LINK="https://afrimamafarms.com/endpoint/Api/getCategories.php";  
+     const response= await axios.get(API_LINK,
+      { headers:{
+        "Content-Type":"application/json"
+        }
+       });
+       console.log("lol response",response.data);
+       setProduce(response.data);
+       setError("");
+       showMessage();
+       setTimeout(()=> setMsgdisplay({ display:"none" }),1000);
+       setMessage("product loaded succesfully");
+      }catch(error){
+        if(error.response){
+                console.log(error.response.data)
+                console.log('error fetching categories!');
+                setError("Oops,an error occured while fetching categories, refresh this page");
+                showMessage();
+                setTimeout(()=> setMsgdisplay({ display:"none" }),3000);
+                setMessage("unable to fetch product, reload this page");
+        }
+      }
+  }
+
    
   const check=()=>{
     setCheckout(true);
