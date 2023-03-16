@@ -34,6 +34,7 @@ import EachItem from './components/eachitem';
 function App() { 
  // const { products }= data;
   const [products, setProduce]= useState([]);
+  const [categories, setCategory]= useState([]);
  // const [cartitems, setCartitems ]=useLocalStorage("cartkey",[]);
   const [cartitems, setCartitems ]=useState([]);
 // const [cartdisplay, setcartdisplay]=useState({ left:"-70%",transition: "0.3s" });
@@ -41,8 +42,8 @@ function App() {
   const [cartshow ,setcartshow]=useState({ width:"0" });
   const [checkout, setCheckout]= useState(true);
   const [searchterm, setsearchterm] =useState("");
-  const [searchresult, setsearchresult] =useState([]);
-  const [jsonresult, setjsonresult] =useState([]);
+ // const [searchresult, setsearchresult] =useState([]);
+//  const [jsonresult, setjsonresult] =useState([]);
   const [loading, setLoading] = useState({display:"none"});
   const [delayloading, setdelayLoading] = useState({display:"none"});
   const [Error, setError ]=useState("");
@@ -55,6 +56,10 @@ function App() {
   useEffect(()=>{
      getProduce();
   }, []); 
+
+  useEffect(()=>{
+    getCategories();
+ }, []); 
   
   useEffect(()=>{
   searchproducts();
@@ -119,20 +124,20 @@ function App() {
       const API_LINK="http://localhost/sales/Grittystore/Api/getCategories.php";
      //  const API_LINK="http://api.afrimamafarms.com/Api/getCategories.php";  
    //    const API_LINK="https://afrimamafarms.com/endpoint/Api/getCategories.php";  
-     const response= await axios.get(API_LINK,
+     const categoryresponse= await axios.get(API_LINK,
       { headers:{
         "Content-Type":"application/json"
         }
        });
-       console.log("lol response",response.data);
-       setProduce(response.data);
+       console.log("lol categoryresponse",categoryresponse.data);
+       setCategory(categoryresponse.data);
        setError("");
        showMessage();
        setTimeout(()=> setMsgdisplay({ display:"none" }),1000);
        setMessage("product loaded succesfully");
       }catch(error){
-        if(error.response){
-                console.log(error.response.data)
+        if(error.categoryresponse){
+                console.log(error.categoryresponse.data)
                 console.log('error fetching categories!');
                 setError("Oops,an error occured while fetching categories, refresh this page");
                 showMessage();
@@ -328,7 +333,7 @@ function App() {
                           
                             <Route path='/' element={
                                 <>
-                                <Sectiona />  
+                                <Sectiona categories={categories}/>  
                                 <Main onAdd={onAdd}  onShow={show} onSearch={searchchange} searchterm={searchterm} products= {products} error={Error}/>
                                 <Sectionb />
                                 </>

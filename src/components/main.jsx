@@ -16,7 +16,7 @@ function Main( { products, onAdd , onShow, onSearch, searchterm, error }  ) {
                  <div className="buyarrow">                   
                     <FaArrowCircleDown className='arrowdown'/>
                  </div>
-                 <h6 id='product' ref={ref}>Products</h6>
+                 <h6 id='product' ref={ref}>Shop Our Collection Now</h6>
                  <input type="search" name="" id=""  value={searchterm} placeholder="search by name or description" onChange={ (e)=>onSearch(e.target.value)}/>
               </div>
              

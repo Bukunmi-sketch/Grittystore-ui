@@ -1,7 +1,7 @@
 import React from 'react';
 import first from '../Images/14.jpg'
 
-function Sectiona() {
+function Sectiona({categories}) {
     return ( 
         <>
         <section className="sectiona" style={{border:"1px solid transparent"}}>
@@ -31,29 +31,14 @@ function Sectiona() {
              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam molestias officia commodi. Nemo maiores culpa saepe aut, debitis sunt aspernatur vel error repellendus suscipit, necessitatibus expedita? Repellendus mollitia a totam.</p>
 
              <div className="flex-container">
-                <div className="box">
-                   
-                    <p>Sneakers</p>
+                 { categories.map( (category) =>
+                    <div className="box">
+                    <p>{category.name}</p>
                     <p>lorem ipsum dolor sit amet,</p>
-                </div>
-
-                <div className="box">
-                   
-                    <p>Womens shoes</p>
-                    <p>lorem ipsum dolor sit amet,</p>
-                </div>
-
-                <div className="box">
-                   
-                    <p>Mens Shoes</p>
-                    <p>lorem ipsum dolor sit amet,</p>
-                </div>
-
-                <div className="box">
-                   
-                    <p>exchange</p>
-                    <p>lorem ipsum dolor sit amet,</p>
-                </div>
+                </div> 
+                 )
+                
+}
              </div>
         </section>
 
