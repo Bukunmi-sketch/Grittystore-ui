@@ -154,7 +154,7 @@ function App() {
   }
   const display=()=>{
    // setcartdisplay({show:true, left:"0",transition: "0.3s" });
-    setcartdisplay({show:true, width:"50%" ,transition: "0.3s"});
+    setcartdisplay({show:true, width:"30%" ,transition: "0.3s"});
     console.log(cartdisplay);
     unshow();
   }

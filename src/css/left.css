@@ -35,7 +35,7 @@
   /* Add Animation */
 @keyframes animateleftbar {
   from {width:0%; opacity: 0}
-  to {width: 50%; opacity: 1}
+  to {width: 30%; opacity: 1}
    
  }
 
@@ -50,7 +50,7 @@
 }
 
 .leftnav ul li {
-  border: 1px solid yellow;
+  border: 1px solid transparent;
   list-style-type: none;
   display: inline-block;
   padding: 10px 0px;
