@@ -299,6 +299,7 @@ function App() {
               onDisplay={display} 
               cartdisplay={cartdisplay} 
               onUnDisplay={undisplay}
+              categories={categories}
             />
             )  :  ( '')  }   
 
@@ -330,6 +331,7 @@ function App() {
                             <Route path='/success/:id' element={  <Success Loader={Loader} unLoader={unLoader}  /> } />
                             <Route path='/complete/' element={< Klumpsuccess/> } />
                             <Route path='/eachitem/:productid' element={  <EachItem checkout={checkout} onAdd={onAdd} onRemove={onRemove} /> } />
+                            <Route path='/category/:categoryname' element={  <EachItem checkout={checkout} onAdd={onAdd} onRemove={onRemove} /> } />
                           
                             <Route path='/' element={
                                 <>
