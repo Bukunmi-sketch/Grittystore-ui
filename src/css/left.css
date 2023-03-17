@@ -49,6 +49,13 @@
   border: 1px solid red;
 }
 
+.leftnav ul h3{
+  border: 1px solid transparent;
+  width:80%;
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
 .leftnav ul li {
   border: 1px solid transparent;
   list-style-type: none;
