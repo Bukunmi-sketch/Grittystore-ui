@@ -1,3 +1,20 @@
+COMPLETE PRODUCT
+ -FRONTEND 
+  searching on homepage
+  find a befitting background url for the first section
+  re-style the products
+
+
+ -BACKEND
+  add image to the category section
+  
+
+
+
+
+
+LAUNCHING
+
 complete the readme text file
 get  a screenshot of the site in mobie and desktop mode
 get a screenshot of the file arrangement in the code
