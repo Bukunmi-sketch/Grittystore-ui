@@ -119,10 +119,10 @@ Deploy Api-Server, Admin Web Dashboard, Mobile App and
 Amplitude Dashboard for Analytics in Local machine
 
 # Installation Steps
-Download Enatega full app and extract it
+Download Grittystore folder as a zip file and extract it
 Open terminal in extracted folder
 Api Server
-1. run cd food-delivery-api in terminal
+1. run cd Grittystore in terminal
 2. Set environment file (.env)
 NODE_ENV=development
 PORT=8000
