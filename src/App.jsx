@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "animate.css/animate.min.css";
 import './css/App.css'
 import './css/product.css'
 import './css/media.css'

@@ -17,7 +17,9 @@ function Sectiona({categories}) {
                      <a href='#product'><button className='buy-now' > Shop Now</button> </a> 
                  </div>
             </div> */}
-
+<AnimationOnScroll animateIn="animate__bounceIn">
+  <h2>Some Text</h2>
+</AnimationOnScroll>
             <div className="top-content" >
                 <h1 className="Natural"> FIND YOUR NEXT FAVORITE SHOE </h1>
                 <p> Shop Our Collection Now </p>
