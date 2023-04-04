@@ -3,6 +3,7 @@ COMPLETE PRODUCT
   searching on homepage Will direct to search button input
   find a befitting background url for the first section
   re-style the products
+  add scrolling animation to the page
 
 
  -BACKEND
