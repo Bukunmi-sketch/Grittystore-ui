@@ -11,13 +11,13 @@ function Main( { products, onAdd , onShow, onSearch, searchterm, error }  ) {
   //
     return ( 
         <>
-             <div className="about">
+             <div className="about" id="search">
                                
                  <div className="buyarrow">                   
                     <FaArrowCircleDown className='arrowdown'/>
                  </div>
                  <h6 id='product' ref={ref}>Shop Our Collection Now</h6>
-                 <input type="search" name="" id=""  value={searchterm} placeholder="search by name or description" onChange={ (e)=>onSearch(e.target.value)}/>
+                 <input type="search" name=""   value={searchterm} placeholder="search by name or description" onChange={ (e)=>onSearch(e.target.value)}/>
               </div>
              
   { error =='' ? (

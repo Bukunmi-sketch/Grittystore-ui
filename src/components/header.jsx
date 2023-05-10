@@ -21,7 +21,7 @@ function Header( {countCartitems, cartdisplay, onDisplay, onShow,  onUnDisplay, 
                  <Link to='/' className="menu-item" onClick={()=>onCarticon()} > <span> GrittyStore </span>   {/* <img src={logo} alt='afrimama' style={ {width:'100%', } }/> */}  </Link>
                  </h4>
 
-                 <input type="search" name="" id=""  value={searchterm} placeholder="search by name or description" onChange={ (e)=>onSearch(e.target.value)}/>
+                <a href="#search">  <input  type="search" name="" id=""  value={searchterm} placeholder="search by name or description" onChange={ (e)=>onSearch(e.target.value)}/> </a>
 
                  <div className="otherside"  >
                        
