@@ -13,7 +13,7 @@ function Footer( { onUnDisplay, scrollto} ) {
             <div className="first-box">
                 <ul>
                     <li>  <span> GrittyStore </span>  {/* <img src={logo} alt="afrimama"  className='footer-logo'/> */}</li>
-                    <li> <p> Get your fresh items with no hidden cost while you spread your cost comfortably over 4 months </p></li>
+                    <li> <p> buy comfortable wears with us</p></li>
                     <li> <a href='#product'> <button className='buy-now' > Buy now</button></a></li>
                   
                 </ul>
